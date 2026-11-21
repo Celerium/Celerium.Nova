@@ -85,7 +85,7 @@ jobs:
 
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: test-results-${{ matrix.id }}
           path: build/*_Results.xml
@@ -93,7 +93,7 @@ jobs:
 
       - name: Upload the built module
         if: matrix.id == 'linux-pwsh'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: Celerium.Nova-${{ env.MODULE_VERSION }}
           path: build/Celerium.Nova/${{ env.MODULE_VERSION }}
