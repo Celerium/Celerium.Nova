@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Install prerequisites
         run: ./build/Install-Prerequisites.ps1 -Verbose
