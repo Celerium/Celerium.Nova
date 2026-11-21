@@ -4,7 +4,7 @@ external help file: Celerium.Nova-Help.xml
 HelpUri: https://celerium.github.io/Celerium.Nova/site/HtmlReport/New-clNovaHtmlReport.html
 Locale: en-US
 Module Name: Celerium.Nova
-ms.date: 11/20/2026
+ms.date: 11/21/2026
 parent: HtmlReport
 PlatyPS schema version: 2024-05-01
 title: New-clNovaHtmlReport
@@ -63,12 +63,11 @@ Creates an HTML report of the services & saves it to Services.html
 
 ```powershell
 $Cards = @(
-```
-
-@{ Title = 'Running'; Value = 120; Color = 'Success'; Icon = 'check-circle-fill' }
+    @{ Title = 'Running'; Value = 120; Color = 'Success'; Icon = 'check-circle-fill' }
     @{ Title = 'Stopped'; Value = 80; Color = 'Danger'; Icon = 'x-circle-fill' }
 )
 $Services | New-clNovaHtmlReport -Title 'Services' -SummaryCard $Cards -StatusMap @{ Status = @{ Running = 'Success'; Stopped = 'Danger' } } -Path .\Services.html
+```
 
 Creates a report with 2 summary cards & colors the Status column
 

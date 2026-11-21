@@ -4,7 +4,7 @@ external help file: Celerium.Nova-Help.xml
 HelpUri: https://celerium.github.io/Celerium.Nova/site/HtmlReport/New-clNovaHtmlSummaryCardSet.html
 Locale: en-US
 Module Name: Celerium.Nova
-ms.date: 11/20/2026
+ms.date: 11/21/2026
 parent: HtmlReport
 PlatyPS schema version: 2024-05-01
 title: New-clNovaHtmlSummaryCardSet
@@ -48,9 +48,8 @@ parameters of New-clNovaHtmlSummaryCard (Title, Value, Note, Percent, Color, Ico
 
 ```powershell
 $Cards = 1..6 | ForEach-Object { @{ Title = "Card $_"; Value = $_ } }
-```
-
 New-clNovaHtmlSummaryCardSet -Card $Cards
+```
 
 Returns the HTML of 6 cards placed on 2 rows with 3 cards on each row
 
@@ -58,12 +57,11 @@ Returns the HTML of 6 cards placed on 2 rows with 3 cards on each row
 
 ```powershell
 $Cards = @(
-```
-
-@{ Title = 'Supported'; Value = '14 | 61%'; Percent = 61; Color = 'Success'; Icon = 'check-circle-fill' }
+    @{ Title = 'Supported'; Value = '14 | 61%'; Percent = 61; Color = 'Success'; Icon = 'check-circle-fill' }
     [PSCustomObject]@{ Title = 'Total'; Value = 23; Icon = 'laptop' }
 )
 $Cards | New-clNovaHtmlSummaryCardSet -MaxPerRow 6
+```
 
 Returns the HTML of 2 cards, cards can be sent down the pipeline
 

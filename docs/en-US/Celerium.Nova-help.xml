@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<helpItems xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:maml="http://schemas.microsoft.com/maml/2004/10" schema="maml" xmlns="http://msh">
+<helpItems xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" schema="maml" xmlns="http://msh">
   <command:command>
     <command:details>
       <command:name>ConvertTo-clNovaHtmlDataUri</command:name>
@@ -21,7 +21,7 @@ This is an internal helper function that is used by the public functions</maml:p
     <command:syntax>
       <command:syntaxItem>
         <maml:name>ConvertTo-clNovaHtmlDataUri</maml:name>
-        <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
           <maml:name>Path</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -32,7 +32,7 @@ This is an internal helper function that is used by the public functions</maml:p
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
         <maml:name>Path</maml:name>
         <maml:description>
           <maml:para>The path of the image file</maml:para>
@@ -104,7 +104,7 @@ This is an internal helper function that is used by the public functions</maml:p
     <command:syntax>
       <command:syntaxItem>
         <maml:name>ConvertTo-clNovaHtmlEncoded</maml:name>
-        <command:parameter pipelineInput="false" position="0" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
           <maml:name>InputObject</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
@@ -115,7 +115,7 @@ This is an internal helper function that is used by the public functions</maml:p
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter pipelineInput="true (ByValue)" position="0" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true (ByValue)" position="0" aliases="none">
         <maml:name>InputObject</maml:name>
         <maml:description>
           <maml:para>The value to encode, the string value of the object is encoded</maml:para>
@@ -213,7 +213,7 @@ This is an internal helper function that is used by the public functions</maml:p
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Expand-clNovaHtmlTemplate</maml:name>
-        <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
           <maml:name>Template</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -221,7 +221,7 @@ This is an internal helper function that is used by the public functions</maml:p
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="1" aliases="none" required="true" variableLength="false" globbing="false">
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
           <maml:name>Token</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">IDictionary</command:parameterValue>
@@ -232,7 +232,7 @@ This is an internal helper function that is used by the public functions</maml:p
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
         <maml:name>Template</maml:name>
         <maml:description>
           <maml:para>The text with the {{Name}} tokens</maml:para>
@@ -242,7 +242,7 @@ This is an internal helper function that is used by the public functions</maml:p
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="1" aliases="none" required="true" variableLength="false" globbing="false">
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
         <maml:name>Token</maml:name>
         <maml:description>
           <maml:para>Hashtable of token names &amp; the values to replace them with</maml:para>
@@ -325,7 +325,7 @@ This is an internal helper function that is used by the public functions</maml:p
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-clNovaCardLayout</maml:name>
-        <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
           <maml:name>Count</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
@@ -333,7 +333,7 @@ This is an internal helper function that is used by the public functions</maml:p
             <maml:name>System.Int32</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
           <maml:name>MaxPerRow</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
@@ -341,7 +341,7 @@ This is an internal helper function that is used by the public functions</maml:p
             <maml:name>System.Int32</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
           <maml:name>MaxPerRowTablet</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
@@ -352,7 +352,7 @@ This is an internal helper function that is used by the public functions</maml:p
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
         <maml:name>Count</maml:name>
         <maml:description>
           <maml:para>The number of summary cards</maml:para>
@@ -362,7 +362,7 @@ This is an internal helper function that is used by the public functions</maml:p
           <maml:name>System.Int32</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
         <maml:name>MaxPerRow</maml:name>
         <maml:description>
           <maml:para>The most cards that are allowed on one row of a desktop screen</maml:para>
@@ -373,7 +373,7 @@ This is an internal helper function that is used by the public functions</maml:p
           <maml:name>System.Int32</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
         <maml:name>MaxPerRowTablet</maml:name>
         <maml:description>
           <maml:para>The most cards that are allowed on one row of a tablet screen</maml:para>
@@ -464,7 +464,7 @@ This is an internal helper function that is used by the public functions</maml:p
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-clNovaHtmlIcon</maml:name>
-        <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
           <maml:name>Name</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -472,7 +472,7 @@ This is an internal helper function that is used by the public functions</maml:p
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
           <maml:name>ResourcePath</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -483,7 +483,7 @@ This is an internal helper function that is used by the public functions</maml:p
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
         <maml:name>Name</maml:name>
         <maml:description>
           <maml:para>The name of the Bootstrap Icon without the .svg extension</maml:para>
@@ -496,7 +496,7 @@ This is an internal helper function that is used by the public functions</maml:p
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
         <maml:name>ResourcePath</maml:name>
         <maml:description>
           <maml:para>The HtmlReport folder to read the icons from</maml:para>
@@ -571,7 +571,7 @@ This is an internal helper function that is used by the public functions</maml:p
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-clNovaHtmlResource</maml:name>
-        <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
           <maml:name>Name</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -579,7 +579,7 @@ This is an internal helper function that is used by the public functions</maml:p
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
           <maml:name>ResourcePath</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -590,7 +590,7 @@ This is an internal helper function that is used by the public functions</maml:p
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
         <maml:name>Name</maml:name>
         <maml:description>
           <maml:para>The path of the file relative to the HtmlReport folder</maml:para>
@@ -603,7 +603,7 @@ This is an internal helper function that is used by the public functions</maml:p
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
         <maml:name>ResourcePath</maml:name>
         <maml:description>
           <maml:para>The HtmlReport folder to read the file from</maml:para>
@@ -693,7 +693,7 @@ This is an internal helper function that is used by the public functions</maml:p
     <command:syntax>
       <command:syntaxItem>
         <maml:name>Get-clNovaResourcePath</maml:name>
-        <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
           <maml:name>RelativePath</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -701,7 +701,7 @@ This is an internal helper function that is used by the public functions</maml:p
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
           <maml:name>SearchPath</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -712,7 +712,7 @@ This is an internal helper function that is used by the public functions</maml:p
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
         <maml:name>RelativePath</maml:name>
         <maml:description>
           <maml:para>The path of the resource relative to the root of the resources</maml:para>
@@ -725,7 +725,7 @@ This is an internal helper function that is used by the public functions</maml:p
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
         <maml:name>SearchPath</maml:name>
         <maml:description>
           <maml:para>The folder the search starts from &amp; works up from</maml:para>
@@ -819,7 +819,7 @@ other reports
     <command:syntax>
       <command:syntaxItem>
         <maml:name>New-clNovaHtmlReport</maml:name>
-        <command:parameter pipelineInput="false" position="0" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
           <maml:name>InputObject</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">Object[]</command:parameterValue>
@@ -827,7 +827,7 @@ other reports
             <maml:name>System.Object[]</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
           <maml:name>Path</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -835,7 +835,7 @@ other reports
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
           <maml:name>Title</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -843,7 +843,7 @@ other reports
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="3" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="3" aliases="none">
           <maml:name>Subtitle</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -851,7 +851,7 @@ other reports
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="4" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="4" aliases="none">
           <maml:name>Property</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
@@ -859,7 +859,7 @@ other reports
             <maml:name>System.String[]</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="5" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="5" aliases="none">
           <maml:name>ColumnName</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">IDictionary</command:parameterValue>
@@ -867,7 +867,7 @@ other reports
             <maml:name>System.Collections.IDictionary</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="6" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="6" aliases="none">
           <maml:name>StatusMap</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">IDictionary</command:parameterValue>
@@ -875,7 +875,7 @@ other reports
             <maml:name>System.Collections.IDictionary</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="7" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="7" aliases="none">
           <maml:name>SummaryCard</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">Object[]</command:parameterValue>
@@ -883,7 +883,7 @@ other reports
             <maml:name>System.Object[]</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="8" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="8" aliases="none">
           <maml:name>MaxCardsPerRow</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
@@ -891,7 +891,7 @@ other reports
             <maml:name>System.Int32</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="9" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="9" aliases="none">
           <maml:name>TableTitle</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -899,7 +899,7 @@ other reports
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="10" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="10" aliases="none">
           <maml:name>TableNote</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
@@ -907,7 +907,7 @@ other reports
             <maml:name>System.String[]</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="11" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="11" aliases="none">
           <maml:name>PageSize</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
@@ -915,7 +915,7 @@ other reports
             <maml:name>System.Int32</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="12" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="12" aliases="none">
           <maml:name>NavigationItem</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">Object[]</command:parameterValue>
@@ -923,7 +923,7 @@ other reports
             <maml:name>System.Object[]</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="13" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="13" aliases="none">
           <maml:name>BrandText</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -931,7 +931,7 @@ other reports
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="14" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="14" aliases="none">
           <maml:name>BrandIcon</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -939,7 +939,7 @@ other reports
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="15" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="15" aliases="none">
           <maml:name>BrandLogoPath</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -947,7 +947,7 @@ other reports
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="16" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="16" aliases="none">
           <maml:name>BrandLogoCollapsedPath</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -955,7 +955,7 @@ other reports
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="17" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="17" aliases="none">
           <maml:name>FaviconPath</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -963,7 +963,7 @@ other reports
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="18" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="18" aliases="none">
           <maml:name>BrandUrl</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -971,7 +971,7 @@ other reports
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="19" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="19" aliases="none">
           <maml:name>Description</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -979,7 +979,7 @@ other reports
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="20" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="20" aliases="none">
           <maml:name>Author</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -987,7 +987,7 @@ other reports
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="21" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="21" aliases="none">
           <maml:name>Footer</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -995,7 +995,7 @@ other reports
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="22" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="22" aliases="none">
           <maml:name>ResourceMode</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -1003,7 +1003,7 @@ other reports
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="23" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="23" aliases="none">
           <maml:name>ResourcePath</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -1011,14 +1011,14 @@ other reports
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="named" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named" aliases="none">
           <maml:name>WhatIf</maml:name>
           <maml:description />
           <dev:type>
             <maml:name>System.Management.Automation.SwitchParameter</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="named" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="named" aliases="none">
           <maml:name>Confirm</maml:name>
           <maml:description />
           <dev:type>
@@ -1028,7 +1028,7 @@ other reports
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter pipelineInput="false" position="20" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="20" aliases="none">
         <maml:name>Author</maml:name>
         <maml:description>
           <maml:para>The author meta tag of the page</maml:para>
@@ -1038,7 +1038,7 @@ other reports
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="14" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="14" aliases="none">
         <maml:name>BrandIcon</maml:name>
         <maml:description>
           <maml:para>The name of the Bootstrap Icon shown next to the name at the top of the sidebar</maml:para>
@@ -1049,7 +1049,7 @@ other reports
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="16" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="16" aliases="none">
         <maml:name>BrandLogoCollapsedPath</maml:name>
         <maml:description>
           <maml:para>The path of the logo image that is shown at the top of the sidebar when the sidebar is collapsed</maml:para>
@@ -1062,7 +1062,7 @@ A square image works best</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="15" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="15" aliases="none">
         <maml:name>BrandLogoPath</maml:name>
         <maml:description>
           <maml:para>The path of a logo image (png, jpg, gif, svg, or webp) that replaces the icon &amp; the name at the top of the sidebar</maml:para>
@@ -1077,7 +1077,7 @@ unless BrandLogoCollapsedPath is used</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="13" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="13" aliases="none">
         <maml:name>BrandText</maml:name>
         <maml:description>
           <maml:para>The name shown at the top of the sidebar</maml:para>
@@ -1088,7 +1088,7 @@ unless BrandLogoCollapsedPath is used</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="18" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="18" aliases="none">
         <maml:name>BrandUrl</maml:name>
         <maml:description>
           <maml:para>The link of the name at the top of the sidebar</maml:para>
@@ -1099,7 +1099,7 @@ unless BrandLogoCollapsedPath is used</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="5" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="5" aliases="none">
         <maml:name>ColumnName</maml:name>
         <maml:description>
           <maml:para>Hashtable of a property name &amp; the column title to show for it</maml:para>
@@ -1109,7 +1109,7 @@ unless BrandLogoCollapsedPath is used</maml:para>
           <maml:name>System.Collections.IDictionary</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="Named" aliases="cf" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="cf">
         <maml:name>Confirm</maml:name>
         <maml:description>
           <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
@@ -1118,7 +1118,7 @@ unless BrandLogoCollapsedPath is used</maml:para>
           <maml:name>System.Management.Automation.SwitchParameter</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="19" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="19" aliases="none">
         <maml:name>Description</maml:name>
         <maml:description>
           <maml:para>The description meta tag of the page</maml:para>
@@ -1128,7 +1128,7 @@ unless BrandLogoCollapsedPath is used</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="17" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="17" aliases="none">
         <maml:name>FaviconPath</maml:name>
         <maml:description>
           <maml:para>The path of the icon (ico, png, or svg) that is shown on the browser tab</maml:para>
@@ -1140,7 +1140,7 @@ By default an icon of BrandIcon is used</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="21" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="21" aliases="none">
         <maml:name>Footer</maml:name>
         <maml:description>
           <maml:para>Text shown at the bottom of the page</maml:para>
@@ -1151,7 +1151,7 @@ By default an icon of BrandIcon is used</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="true (ByValue)" position="0" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true (ByValue)" position="0" aliases="none">
         <maml:name>InputObject</maml:name>
         <maml:description>
           <maml:para>The objects shown in the table of the report</maml:para>
@@ -1161,7 +1161,7 @@ By default an icon of BrandIcon is used</maml:para>
           <maml:name>System.Object[]</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="8" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="8" aliases="none">
         <maml:name>MaxCardsPerRow</maml:name>
         <maml:description>
           <maml:para>The most summary cards on one row of a desktop screen</maml:para>
@@ -1172,7 +1172,7 @@ By default an icon of BrandIcon is used</maml:para>
           <maml:name>System.Int32</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="12" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="12" aliases="none">
         <maml:name>NavigationItem</maml:name>
         <maml:description>
           <maml:para>The links of the sidebar.
@@ -1187,7 +1187,7 @@ By default links to the summary &amp; the table are shown</maml:para>
           <maml:name>System.Object[]</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="11" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="11" aliases="none">
         <maml:name>PageSize</maml:name>
         <maml:description>
           <maml:para>The number of table rows shown per page, 0 shows all rows</maml:para>
@@ -1198,7 +1198,7 @@ By default links to the summary &amp; the table are shown</maml:para>
           <maml:name>System.Int32</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
         <maml:name>Path</maml:name>
         <maml:description>
           <maml:para>The file to save the report to.
@@ -1210,7 +1210,7 @@ The folder is created when it does not exist</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="4" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="4" aliases="none">
         <maml:name>Property</maml:name>
         <maml:description>
           <maml:para>The properties shown as table columns</maml:para>
@@ -1221,7 +1221,7 @@ The folder is created when it does not exist</maml:para>
           <maml:name>System.String[]</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="22" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="22" aliases="none">
         <maml:name>ResourceMode</maml:name>
         <maml:description>
           <maml:para>How Bootstrap is added to the report</maml:para>
@@ -1236,7 +1236,7 @@ files of the jsDelivr CDN, an internet connection is needed to view the report</
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="23" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="23" aliases="none">
         <maml:name>ResourcePath</maml:name>
         <maml:description>
           <maml:para>The HtmlReport folder to read the templates, css, js, &amp; icons from</maml:para>
@@ -1248,7 +1248,7 @@ Use this to change the look of the report</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="6" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="6" aliases="none">
         <maml:name>StatusMap</maml:name>
         <maml:description>
           <maml:para>Colors the values of a column as a status badge, see New-clNovaHtmlTable</maml:para>
@@ -1260,7 +1260,7 @@ Use this to change the look of the report</maml:para>
           <maml:name>System.Collections.IDictionary</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="3" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="3" aliases="none">
         <maml:name>Subtitle</maml:name>
         <maml:description>
           <maml:para>A line of text shown next to the heading such as where the data came from</maml:para>
@@ -1270,7 +1270,7 @@ Use this to change the look of the report</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="7" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="7" aliases="none">
         <maml:name>SummaryCard</maml:name>
         <maml:description>
           <maml:para>The summary cards shown above the table.
@@ -1283,7 +1283,7 @@ New-clNovaHtmlSummaryCard (Title, Value, Note, Percent, Color, Icon, Tooltip, &a
           <maml:name>System.Object[]</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="10" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="10" aliases="none">
         <maml:name>TableNote</maml:name>
         <maml:description>
           <maml:para>Notes shown in a list below the table</maml:para>
@@ -1293,7 +1293,7 @@ New-clNovaHtmlSummaryCard (Title, Value, Note, Percent, Color, Icon, Tooltip, &a
           <maml:name>System.String[]</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="9" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="9" aliases="none">
         <maml:name>TableTitle</maml:name>
         <maml:description>
           <maml:para>The title shown in the header of the table</maml:para>
@@ -1303,7 +1303,7 @@ New-clNovaHtmlSummaryCard (Title, Value, Note, Percent, Color, Icon, Tooltip, &a
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
         <maml:name>Title</maml:name>
         <maml:description>
           <maml:para>The title of the report, shown in the header, the page title, &amp; as the heading</maml:para>
@@ -1313,7 +1313,7 @@ New-clNovaHtmlSummaryCard (Title, Value, Note, Percent, Color, Icon, Tooltip, &a
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="Named" aliases="wi" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="Named" aliases="wi">
         <maml:name>WhatIf</maml:name>
         <maml:description>
           <maml:para>Runs the command in a mode that only reports what would happen without performing the actions.</maml:para>
@@ -1374,12 +1374,11 @@ Get-Service | New-clNovaHtmlReport -Title 'Services' -Property Name, Status, Sta
         <maml:introduction>
           <maml:para>```powershell
 $Cards = @(
-```</maml:para>
-          <maml:para>&#x80;</maml:para>
-          <maml:para>@{ Title = 'Running'; Value = 120; Color = 'Success'; Icon = 'check-circle-fill' }
+    @{ Title = 'Running'; Value = 120; Color = 'Success'; Icon = 'check-circle-fill' }
     @{ Title = 'Stopped'; Value = 80; Color = 'Danger'; Icon = 'x-circle-fill' }
 )
-$Services | New-clNovaHtmlReport -Title 'Services' -SummaryCard $Cards -StatusMap @{ Status = @{ Running = 'Success'; Stopped = 'Danger' } } -Path .\Services.html</maml:para>
+$Services | New-clNovaHtmlReport -Title 'Services' -SummaryCard $Cards -StatusMap @{ Status = @{ Running = 'Success'; Stopped = 'Danger' } } -Path .\Services.html
+```</maml:para>
           <maml:para>&#x80;</maml:para>
           <maml:para>Creates a report with 2 summary cards &amp; colors the Status column</maml:para>
         </maml:introduction>
@@ -1437,7 +1436,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>New-clNovaHtmlSummaryCard</maml:name>
-        <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
           <maml:name>Title</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -1445,7 +1444,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="1" aliases="none" required="true" variableLength="false" globbing="false">
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
           <maml:name>Value</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
@@ -1453,7 +1452,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
             <maml:name>System.Object</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
           <maml:name>Note</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -1461,7 +1460,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="3" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="3" aliases="none">
           <maml:name>Percent</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">double</command:parameterValue>
@@ -1469,7 +1468,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
             <maml:name>System.Double</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="4" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="4" aliases="none">
           <maml:name>Color</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -1477,7 +1476,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="5" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="5" aliases="none">
           <maml:name>Icon</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -1485,7 +1484,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="6" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="6" aliases="none">
           <maml:name>Tooltip</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -1493,7 +1492,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="7" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="7" aliases="none">
           <maml:name>Url</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -1501,7 +1500,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="8" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="8" aliases="none">
           <maml:name>ResourcePath</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -1512,7 +1511,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter pipelineInput="false" position="4" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="4" aliases="none">
         <maml:name>Color</maml:name>
         <maml:description>
           <maml:para>The color of the card border, title, &amp; progress bar</maml:para>
@@ -1525,7 +1524,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="5" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="5" aliases="none">
         <maml:name>Icon</maml:name>
         <maml:description>
           <maml:para>The name of a Bootstrap Icon to show on the card</maml:para>
@@ -1537,7 +1536,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
         <maml:name>Note</maml:name>
         <maml:description>
           <maml:para>A small line of text shown below the value</maml:para>
@@ -1547,7 +1546,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="3" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="3" aliases="none">
         <maml:name>Percent</maml:name>
         <maml:description>
           <maml:para>Shows a progress bar that is filled with this percentage (0 - 100)</maml:para>
@@ -1557,7 +1556,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
           <maml:name>System.Double</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="8" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="8" aliases="none">
         <maml:name>ResourcePath</maml:name>
         <maml:description>
           <maml:para>The HtmlReport folder to read the templates &amp; icons from</maml:para>
@@ -1568,7 +1567,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
         <maml:name>Title</maml:name>
         <maml:description>
           <maml:para>The title of the card</maml:para>
@@ -1578,7 +1577,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="6" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="6" aliases="none">
         <maml:name>Tooltip</maml:name>
         <maml:description>
           <maml:para>The text that is shown when the mouse is over the card</maml:para>
@@ -1588,7 +1587,7 @@ New-clNovaHtmlReport to create a complete page</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="7" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="7" aliases="none">
         <maml:name>Url</maml:name>
         <maml:description>
           <maml:para>Makes the card a link.
@@ -1599,7 +1598,7 @@ Only http, https, mailto, &amp; page (#) links are allowed</maml:para>
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="1" aliases="none" required="true" variableLength="false" globbing="false">
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
         <maml:name>Value</maml:name>
         <maml:description>
           <maml:para>The main value of the card such as a total or text like [ 14 | 61% ]</maml:para>
@@ -1703,7 +1702,7 @@ parameters of New-clNovaHtmlSummaryCard (Title, Value, Note, Percent, Color, Ico
     <command:syntax>
       <command:syntaxItem>
         <maml:name>New-clNovaHtmlSummaryCardSet</maml:name>
-        <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+        <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
           <maml:name>Card</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">Object[]</command:parameterValue>
@@ -1711,7 +1710,7 @@ parameters of New-clNovaHtmlSummaryCard (Title, Value, Note, Percent, Color, Ico
             <maml:name>System.Object[]</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
           <maml:name>MaxPerRow</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
@@ -1719,7 +1718,7 @@ parameters of New-clNovaHtmlSummaryCard (Title, Value, Note, Percent, Color, Ico
             <maml:name>System.Int32</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
           <maml:name>Id</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -1727,7 +1726,7 @@ parameters of New-clNovaHtmlSummaryCard (Title, Value, Note, Percent, Color, Ico
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="3" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="3" aliases="none">
           <maml:name>ResourcePath</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -1738,7 +1737,7 @@ parameters of New-clNovaHtmlSummaryCard (Title, Value, Note, Percent, Color, Ico
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter pipelineInput="true (ByValue)" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+      <command:parameter required="true" variableLength="false" globbing="false" pipelineInput="true (ByValue)" position="0" aliases="none">
         <maml:name>Card</maml:name>
         <maml:description>
           <maml:para>One or more cards, hashtables or objects with the properties of New-clNovaHtmlSummaryCard</maml:para>
@@ -1750,7 +1749,7 @@ parameters of New-clNovaHtmlSummaryCard (Title, Value, Note, Percent, Color, Ico
           <maml:name>System.Object[]</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
         <maml:name>Id</maml:name>
         <maml:description>
           <maml:para>The HTML id of the group, can be used as an anchor (#psn-summary)</maml:para>
@@ -1761,7 +1760,7 @@ parameters of New-clNovaHtmlSummaryCard (Title, Value, Note, Percent, Color, Ico
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
         <maml:name>MaxPerRow</maml:name>
         <maml:description>
           <maml:para>The most cards that are placed on one row of a desktop screen</maml:para>
@@ -1772,7 +1771,7 @@ parameters of New-clNovaHtmlSummaryCard (Title, Value, Note, Percent, Color, Ico
           <maml:name>System.Int32</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="3" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="3" aliases="none">
         <maml:name>ResourcePath</maml:name>
         <maml:description>
           <maml:para>The HtmlReport folder to read the templates &amp; icons from</maml:para>
@@ -1815,9 +1814,8 @@ parameters of New-clNovaHtmlSummaryCard (Title, Value, Note, Percent, Color, Ico
         <maml:introduction>
           <maml:para>```powershell
 $Cards = 1..6 | ForEach-Object { @{ Title = "Card $_"; Value = $_ } }
+New-clNovaHtmlSummaryCardSet -Card $Cards
 ```</maml:para>
-          <maml:para>&#x80;</maml:para>
-          <maml:para>New-clNovaHtmlSummaryCardSet -Card $Cards</maml:para>
           <maml:para>&#x80;</maml:para>
           <maml:para>Returns the HTML of 6 cards placed on 2 rows with 3 cards on each row</maml:para>
         </maml:introduction>
@@ -1829,12 +1827,11 @@ $Cards = 1..6 | ForEach-Object { @{ Title = "Card $_"; Value = $_ } }
         <maml:introduction>
           <maml:para>```powershell
 $Cards = @(
-```</maml:para>
-          <maml:para>&#x80;</maml:para>
-          <maml:para>@{ Title = 'Supported'; Value = '14 | 61%'; Percent = 61; Color = 'Success'; Icon = 'check-circle-fill' }
+    @{ Title = 'Supported'; Value = '14 | 61%'; Percent = 61; Color = 'Success'; Icon = 'check-circle-fill' }
     [PSCustomObject]@{ Title = 'Total'; Value = 23; Icon = 'laptop' }
 )
-$Cards | New-clNovaHtmlSummaryCardSet -MaxPerRow 6</maml:para>
+$Cards | New-clNovaHtmlSummaryCardSet -MaxPerRow 6
+```</maml:para>
           <maml:para>&#x80;</maml:para>
           <maml:para>Returns the HTML of 2 cards, cards can be sent down the pipeline</maml:para>
         </maml:introduction>
@@ -1884,7 +1881,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
     <command:syntax>
       <command:syntaxItem>
         <maml:name>New-clNovaHtmlTable</maml:name>
-        <command:parameter pipelineInput="false" position="0" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="0" aliases="none">
           <maml:name>InputObject</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">Object[]</command:parameterValue>
@@ -1892,7 +1889,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
             <maml:name>System.Object[]</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
           <maml:name>Property</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
@@ -1900,7 +1897,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
             <maml:name>System.String[]</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
           <maml:name>ColumnName</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">IDictionary</command:parameterValue>
@@ -1908,7 +1905,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
             <maml:name>System.Collections.IDictionary</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="3" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="3" aliases="none">
           <maml:name>StatusMap</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">IDictionary</command:parameterValue>
@@ -1916,7 +1913,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
             <maml:name>System.Collections.IDictionary</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="4" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="4" aliases="none">
           <maml:name>Title</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -1924,7 +1921,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="5" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="5" aliases="none">
           <maml:name>Id</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -1932,7 +1929,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="6" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="6" aliases="none">
           <maml:name>PageSize</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
@@ -1940,7 +1937,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
             <maml:name>System.Int32</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="7" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="7" aliases="none">
           <maml:name>Note</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
@@ -1948,7 +1945,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
             <maml:name>System.String[]</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="8" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="8" aliases="none">
           <maml:name>DateFormat</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -1956,7 +1953,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
             <maml:name>System.String</maml:name>
           </dev:type>
         </command:parameter>
-        <command:parameter pipelineInput="false" position="9" aliases="none" required="false" variableLength="false" globbing="false">
+        <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="9" aliases="none">
           <maml:name>ResourcePath</maml:name>
           <maml:description />
           <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
@@ -1967,7 +1964,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
-      <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="2" aliases="none">
         <maml:name>ColumnName</maml:name>
         <maml:description>
           <maml:para>Hashtable of a property name &amp; the column title to show for it</maml:para>
@@ -1979,7 +1976,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
           <maml:name>System.Collections.IDictionary</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="8" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="8" aliases="none">
         <maml:name>DateFormat</maml:name>
         <maml:description>
           <maml:para>The format of date values</maml:para>
@@ -1990,7 +1987,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="5" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="5" aliases="none">
         <maml:name>Id</maml:name>
         <maml:description>
           <maml:para>The HTML id of the table</maml:para>
@@ -2001,7 +1998,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="true (ByValue)" position="0" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="true (ByValue)" position="0" aliases="none">
         <maml:name>InputObject</maml:name>
         <maml:description>
           <maml:para>The objects to show in the table, hashtables are also accepted</maml:para>
@@ -2011,7 +2008,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
           <maml:name>System.Object[]</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="7" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="7" aliases="none">
         <maml:name>Note</maml:name>
         <maml:description>
           <maml:para>Notes that are shown in a list below the table</maml:para>
@@ -2021,7 +2018,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
           <maml:name>System.String[]</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="6" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="6" aliases="none">
         <maml:name>PageSize</maml:name>
         <maml:description>
           <maml:para>The number of rows shown per page, 0 shows all rows</maml:para>
@@ -2032,7 +2029,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
           <maml:name>System.Int32</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="1" aliases="none">
         <maml:name>Property</maml:name>
         <maml:description>
           <maml:para>The names of the properties to show as columns</maml:para>
@@ -2043,7 +2040,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
           <maml:name>System.String[]</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="9" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="9" aliases="none">
         <maml:name>ResourcePath</maml:name>
         <maml:description>
           <maml:para>The HtmlReport folder to read the templates from</maml:para>
@@ -2054,7 +2051,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
           <maml:name>System.String</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="3" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="3" aliases="none">
         <maml:name>StatusMap</maml:name>
         <maml:description>
           <maml:para>Colors the values of a column as a status badge</maml:para>
@@ -2069,7 +2066,7 @@ report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to
           <maml:name>System.Collections.IDictionary</maml:name>
         </dev:type>
       </command:parameter>
-      <command:parameter pipelineInput="false" position="4" aliases="none" required="false" variableLength="false" globbing="false">
+      <command:parameter required="false" variableLength="false" globbing="false" pipelineInput="false" position="4" aliases="none">
         <maml:name>Title</maml:name>
         <maml:description>
           <maml:para>The title shown in the header of the table card</maml:para>

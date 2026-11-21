@@ -4,7 +4,7 @@ external help file: Celerium.Nova-Help.xml
 HelpUri: https://celerium.github.io/Celerium.Nova/site/Internal/Get-clNovaHtmlResource.html
 Locale: en-US
 Module Name: Celerium.Nova
-ms.date: 11/20/2026
+ms.date: 11/21/2026
 parent: Internal
 PlatyPS schema version: 2024-05-01
 title: Get-clNovaHtmlResource

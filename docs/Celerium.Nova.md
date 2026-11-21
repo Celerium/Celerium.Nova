@@ -6,7 +6,7 @@ HelpInfoUri: https://celerium.github.io/Celerium.Nova/docs/cab/
 Locale: en-US
 Module Guid: c1224352-27dd-401d-aad5-cdd171b98fe5
 Module Name: Celerium.Nova
-ms.date: 11/20/2026
+ms.date: 11/21/2026
 PlatyPS schema version: 2024-05-01
 title: Celerium.Nova Module
 ---
