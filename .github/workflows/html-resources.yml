@@ -30,7 +30,7 @@ jobs:
         run: ./build/Update-HtmlResources.ps1 -Verbose
 
       - name: Create a pull request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           branch: html-resources-update
           commit-message: 'chore: update the HTML report resources'
