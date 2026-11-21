@@ -1,0 +1,31 @@
+        <div class="card shadow mb-4" id="{{Id}}-card">
+{{CardHeader}}            <div class="card-body">
+                <div class="psn-datatable" id="{{Id}}" data-page-size="{{PageSize}}">
+                    <div class="psn-table-tools">
+                        <label>Show
+                            <select class="form-select form-select-sm psn-page-size" aria-label="Entries per page">
+{{PageSizeOptions}}
+                            </select>
+                            entries
+                        </label>
+                        <label class="psn-table-search-label">
+                            <input type="search" class="form-control form-control-sm psn-table-search" placeholder="Search..." aria-label="Search the table">
+                        </label>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-striped psn-table align-middle">
+                            <thead>
+                                <tr>{{Headers}}</tr>
+                            </thead>
+                            <tbody>
+{{Rows}}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="psn-table-footer">
+                        <div class="psn-table-info" role="status"></div>
+                        <nav aria-label="Table pages"><ul class="pagination pagination-sm psn-pager"></ul></nav>
+                    </div>
+                </div>
+{{Notes}}            </div>
+        </div>

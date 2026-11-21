@@ -1,0 +1,44 @@
+name: HTML report resources
+
+# Updates the HTML report resources (Bootstrap & Bootstrap Icons in build/HtmlReport) every week
+# & opens a pull request when something changed
+
+on:
+  schedule:
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+
+  update:
+    name: Update the report resources
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: pwsh
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update the HTML report resources
+        run: ./build/Update-HtmlResources.ps1 -Verbose
+
+      - name: Create a pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: html-resources-update
+          commit-message: 'chore: update the HTML report resources'
+          title: 'Update the HTML report resources'
+          body: |
+            The `HTML report resources` workflow downloaded the latest Bootstrap & Bootstrap Icons files.
+
+            - `build/HtmlReport/vendor`, `build/HtmlReport/icons`, & `build/HtmlReport/resources.json` are used by the HTML reports
+
+            Review the changes & the test results before merging.
+          labels: dependencies

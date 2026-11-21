@@ -1,0 +1,2145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<helpItems xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10" xmlns:maml="http://schemas.microsoft.com/maml/2004/10" schema="maml" xmlns="http://msh">
+  <command:command>
+    <command:details>
+      <command:name>ConvertTo-clNovaHtmlDataUri</command:name>
+      <maml:description>
+        <maml:para>Converts an image file to a data uri that can be embedded in an HTML page</maml:para>
+      </maml:description>
+      <command:verb>ConvertTo</command:verb>
+      <command:noun>clNovaHtmlDataUri</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The ConvertTo-clNovaHtmlDataUri cmdlet reads an image file &amp; returns it as a base64 data uri
+(data:image/png;base64,...) so the image is part of the HTML file &amp; is also shown when the
+computer is offline
+
+The supported files are png, jpg, jpeg, gif, svg, webp, &amp; ico
+
+This is an internal helper function that is used by the public functions</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>ConvertTo-clNovaHtmlDataUri</maml:name>
+        <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+          <maml:name>Path</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The path of the image file</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para />
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>N\A</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--------- EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+ConvertTo-clNovaHtmlDataUri -Path .\logo.png
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns data:image/png;base64,iVBORw0KGgo...</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/Internal/ConvertTo-clNovaHtmlDataUri.html</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://celerium.github.io/Celerium.Nova/site/Internal/ConvertTo-clNovaHtmlDataUri.html</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/Internal/ConvertTo-clNovaHtmlDataUri.html</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>ConvertTo-clNovaHtmlEncoded</command:name>
+      <maml:description>
+        <maml:para>Encodes text so that it can safely be placed in HTML</maml:para>
+      </maml:description>
+      <command:verb>ConvertTo</command:verb>
+      <command:noun>clNovaHtmlEncoded</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The ConvertTo-clNovaHtmlEncoded cmdlet HTML encodes the string value of an object so that
+characters such as &lt; &gt; &amp; " ' are shown as text &amp; can not change the HTML of a report
+
+A null value returns an empty string
+
+This is an internal helper function that is used by the public functions</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>ConvertTo-clNovaHtmlEncoded</maml:name>
+        <command:parameter pipelineInput="false" position="0" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>InputObject</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Object</maml:name>
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter pipelineInput="true (ByValue)" position="0" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>InputObject</maml:name>
+        <maml:description>
+          <maml:para>The value to encode, the string value of the object is encoded</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Object</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para />
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para />
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>N\A</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--------- EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+Server &amp; Client&lt;/b&gt;'
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns &amp;lt;b&amp;gt;Server &amp;amp; Client&amp;lt;/b&amp;gt;</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+'DC01', 'A&amp;B' | ConvertTo-clNovaHtmlEncoded
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns the encoded value of every item sent down the pipeline</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/Internal/ConvertTo-clNovaHtmlEncoded.html</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://celerium.github.io/Celerium.Nova/site/Internal/ConvertTo-clNovaHtmlEncoded.html</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/Internal/ConvertTo-clNovaHtmlEncoded.html</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Expand-clNovaHtmlTemplate</command:name>
+      <maml:description>
+        <maml:para>Replaces the {{Name}} tokens of an HTML template with values</maml:para>
+      </maml:description>
+      <command:verb>Expand</command:verb>
+      <command:noun>clNovaHtmlTemplate</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Expand-clNovaHtmlTemplate cmdlet replaces every {{Name}} token of a template with
+the value of the same name in the Token hashtable
+
+The tokens are replaced in one pass, so a {{Name}} text inside of a value is never
+replaced again.
+A token without a value is replaced with an empty string
+
+The values are NOT encoded, encode text values with ConvertTo-clNovaHtmlEncoded before
+adding them to the Token hashtable
+
+This is an internal helper function that is used by the public functions</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Expand-clNovaHtmlTemplate</maml:name>
+        <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+          <maml:name>Template</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="1" aliases="none" required="true" variableLength="false" globbing="false">
+          <maml:name>Token</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">IDictionary</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Collections.IDictionary</maml:name>
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+        <maml:name>Template</maml:name>
+        <maml:description>
+          <maml:para>The text with the {{Name}} tokens</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="1" aliases="none" required="true" variableLength="false" globbing="false">
+        <maml:name>Token</maml:name>
+        <maml:description>
+          <maml:para>Hashtable of token names &amp; the values to replace them with</maml:para>
+          <maml:para>Example:
+    @{ Title = 'Report'; Body = '&lt;p&gt;Text&lt;/p&gt;' }</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Collections.IDictionary</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Collections.IDictionary</maml:name>
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para />
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>N\A</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--------- EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+{{Title}}&lt;/h1&gt;' -Token @{ Title = 'Report' }
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns &lt;h1&gt;Report&lt;/h1&gt;</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/Internal/Expand-clNovaHtmlTemplate.html</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://celerium.github.io/Celerium.Nova/site/Internal/Expand-clNovaHtmlTemplate.html</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/Internal/Expand-clNovaHtmlTemplate.html</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-clNovaCardLayout</command:name>
+      <maml:description>
+        <maml:para>Calculates how many summary cards are placed in each row</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>clNovaCardLayout</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Get-clNovaCardLayout cmdlet calculates the number of summary cards per row so that
+every row has the same number of cards
+
+    2 rows with 6 cards  -&gt; 3 cards on the top row &amp; 3 on the bottom row
+    3 rows with 12 cards -&gt; 4 cards on each of the 3 rows
+
+The number of rows is the minimum number of rows needed with the MaxPerRow limit.
+The cards
+per row is then the number of cards divided by the rows.
+When the cards can not be divided
+evenly (7 cards) the last row is shorter
+
+The layout is calculated for desktops (Xl), tablets (Md), &amp; phones (Sm)
+
+This is an internal helper function that is used by the public functions</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-clNovaCardLayout</maml:name>
+        <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+          <maml:name>Count</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Int32</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>MaxPerRow</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Int32</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>MaxPerRowTablet</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Int32</maml:name>
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+        <maml:name>Count</maml:name>
+        <maml:description>
+          <maml:para>The number of summary cards</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Int32</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Int32</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>MaxPerRow</maml:name>
+        <maml:description>
+          <maml:para>The most cards that are allowed on one row of a desktop screen</maml:para>
+          <maml:para>Default value: 4</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Int32</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Int32</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>MaxPerRowTablet</maml:name>
+        <maml:description>
+          <maml:para>The most cards that are allowed on one row of a tablet screen</maml:para>
+          <maml:para>Default value: 2</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Int32</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Int32</maml:name>
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.Management.Automation.PSObject</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para />
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>N\A</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--------- EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+Get-clNovaCardLayout -Count 6
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns a layout of 2 rows with 3 cards per row for desktops</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+Get-clNovaCardLayout -Count 12 -MaxPerRow 4
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns a layout of 3 rows with 4 cards per row for desktops</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/Internal/Get-clNovaCardLayout.html</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://celerium.github.io/Celerium.Nova/site/Internal/Get-clNovaCardLayout.html</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/Internal/Get-clNovaCardLayout.html</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-clNovaHtmlIcon</command:name>
+      <maml:description>
+        <maml:para>Gets an inline SVG icon for an HTML report</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>clNovaHtmlIcon</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Get-clNovaHtmlIcon cmdlet returns a Bootstrap Icon as inline SVG so that the icon
+works in an offline report &amp; does not need a font or an internet connection
+
+The icons are the svg files in the icons folder of the report resources
+(build\HtmlReport\icons).
+The Update-HtmlResources.ps1 build script downloads them
+
+When the icon does not exist the info-circle icon is returned.
+An empty string
+is returned when there are no icons at all
+
+This is an internal helper function that is used by the public functions</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-clNovaHtmlIcon</maml:name>
+        <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+          <maml:name>Name</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>ResourcePath</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+        <maml:name>Name</maml:name>
+        <maml:description>
+          <maml:para>The name of the Bootstrap Icon without the .svg extension</maml:para>
+          <maml:para>Example:
+    server
+    check-circle-fill</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>ResourcePath</maml:name>
+        <maml:description>
+          <maml:para>The HtmlReport folder to read the icons from</maml:para>
+          <maml:para>By default the folder of the module is used</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para />
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>N\A</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--------- EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+Get-clNovaHtmlIcon -Name 'server'
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns the SVG of the server icon</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/Internal/Get-clNovaHtmlIcon.html</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://celerium.github.io/Celerium.Nova/site/Internal/Get-clNovaHtmlIcon.html</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/Internal/Get-clNovaHtmlIcon.html</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-clNovaHtmlResource</command:name>
+      <maml:description>
+        <maml:para>Gets the content of a file used to build an HTML report</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>clNovaHtmlResource</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Get-clNovaHtmlResource cmdlet reads a template, css, js, or other text file that
+is used to build an HTML report
+
+The files are in the HtmlReport folder of the module (build\HtmlReport in the source
+module).
+A different folder can be used with the ResourcePath parameter
+
+This is an internal helper function that is used by the public functions</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-clNovaHtmlResource</maml:name>
+        <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+          <maml:name>Name</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>ResourcePath</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+        <maml:name>Name</maml:name>
+        <maml:description>
+          <maml:para>The path of the file relative to the HtmlReport folder</maml:para>
+          <maml:para>Example:
+    templates/Page.html
+    css/Celerium.Nova.css</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>ResourcePath</maml:name>
+        <maml:description>
+          <maml:para>The HtmlReport folder to read the file from</maml:para>
+          <maml:para>By default the folder of the module is used</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para />
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>N\A</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--------- EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+Get-clNovaHtmlResource -Name 'templates/Page.html'
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns the text of the Page.html report template</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+Get-clNovaHtmlResource -Name 'css/Celerium.Nova.css' -ResourcePath 'C:\Branding\HtmlReport'
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns the css from a custom HtmlReport folder</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/Internal/Get-clNovaHtmlResource.html</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://celerium.github.io/Celerium.Nova/site/Internal/Get-clNovaHtmlResource.html</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/Internal/Get-clNovaHtmlResource.html</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>Get-clNovaResourcePath</command:name>
+      <maml:description>
+        <maml:para>Finds a resource file (template, css, js, icon, or data file) of the module</maml:para>
+      </maml:description>
+      <command:verb>Get</command:verb>
+      <command:noun>clNovaResourcePath</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The Get-clNovaResourcePath cmdlet finds the full path of a resource file that is
+shipped with the module
+
+The module is used from two places &amp; the resources are in a different place in each
+    - Source module  : build\HtmlReport (next to the module folder)
+    - Built module   : &lt;module folder&gt;\HtmlReport
+
+The folders above the file that calls the function are searched for the relative path,
+first as &lt;folder&gt;\&lt;RelativePath&gt; &amp; then as &lt;folder&gt;\build\&lt;RelativePath&gt;
+
+This is an internal helper function that is used by the public functions</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>Get-clNovaResourcePath</maml:name>
+        <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+          <maml:name>RelativePath</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>SearchPath</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+        <maml:name>RelativePath</maml:name>
+        <maml:description>
+          <maml:para>The path of the resource relative to the root of the resources</maml:para>
+          <maml:para>Example:
+    HtmlReport/templates/Page.html
+    HtmlReport/css/Celerium.Nova.css</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>SearchPath</maml:name>
+        <maml:description>
+          <maml:para>The folder the search starts from &amp; works up from</maml:para>
+          <maml:para>By default the folder of this file is used</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para />
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>N\A</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--------- EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+Get-clNovaResourcePath -RelativePath 'HtmlReport/templates/Page.html'
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns the full path of the Page.html report template</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+Get-clNovaResourcePath -RelativePath 'HtmlReport/missing.json' -ErrorAction SilentlyContinue
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns nothing when the resource does not exist</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/Internal/Get-clNovaResourcePath.html</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://celerium.github.io/Celerium.Nova/site/Internal/Get-clNovaResourcePath.html</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/Internal/Get-clNovaResourcePath.html</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>New-clNovaHtmlReport</command:name>
+      <maml:description>
+        <maml:para>Creates a modern, mobile friendly HTML report from PowerShell objects</maml:para>
+      </maml:description>
+      <command:verb>New</command:verb>
+      <command:noun>clNovaHtmlReport</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The New-clNovaHtmlReport cmdlet turns any PowerShell objects into a single HTML file with
+a dark sidebar &amp; header, an off white body, summary cards, &amp; a sortable, searchable table
+
+The design is based on SB Admin 2 (ported to Bootstrap 5.3) &amp; works on desktops
+(Windows, Linux, &amp; macOS) as well as on Android &amp; iOS phones &amp; tablets
+
+By default everything needed (Bootstrap, the theme, the icons, &amp; the scripts) is embedded in the
+file so the report works offline.
+Use -ResourceMode Cdn to link the Bootstrap 5.3 CDN files instead
+which makes the file smaller
+
+The pieces of the report are also available as separate functions which can be used to build
+other reports
+    - New-clNovaHtmlSummaryCardSet &amp; New-clNovaHtmlSummaryCard
+    - New-clNovaHtmlTable</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-clNovaHtmlReport</maml:name>
+        <command:parameter pipelineInput="false" position="0" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>InputObject</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">Object[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Object[]</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Path</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Title</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="3" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Subtitle</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="4" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Property</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="5" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>ColumnName</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">IDictionary</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Collections.IDictionary</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="6" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>StatusMap</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">IDictionary</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Collections.IDictionary</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="7" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>SummaryCard</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">Object[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Object[]</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="8" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>MaxCardsPerRow</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Int32</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="9" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>TableTitle</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="10" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>TableNote</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="11" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>PageSize</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Int32</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="12" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>NavigationItem</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">Object[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Object[]</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="13" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>BrandText</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="14" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>BrandIcon</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="15" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>BrandLogoPath</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="16" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>BrandLogoCollapsedPath</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="17" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>FaviconPath</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="18" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>BrandUrl</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="19" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Description</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="20" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Author</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="21" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Footer</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="22" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>ResourceMode</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="23" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>ResourcePath</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="named" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>WhatIf</maml:name>
+          <maml:description />
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="named" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Confirm</maml:name>
+          <maml:description />
+          <dev:type>
+            <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter pipelineInput="false" position="20" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Author</maml:name>
+        <maml:description>
+          <maml:para>The author meta tag of the page</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="14" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>BrandIcon</maml:name>
+        <maml:description>
+          <maml:para>The name of the Bootstrap Icon shown next to the name at the top of the sidebar</maml:para>
+          <maml:para>Default value: speedometer2</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="16" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>BrandLogoCollapsedPath</maml:name>
+        <maml:description>
+          <maml:para>The path of the logo image that is shown at the top of the sidebar when the sidebar is collapsed</maml:para>
+          <maml:para>Only used with BrandLogoPath.
+BrandLogoPath is shown when the sidebar is expanded.
+A square image works best</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="15" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>BrandLogoPath</maml:name>
+        <maml:description>
+          <maml:para>The path of a logo image (png, jpg, gif, svg, or webp) that replaces the icon &amp; the name at the top of the sidebar</maml:para>
+          <maml:para>The logo is embedded in the report, so it is also shown when the computer is offline.
+The icon &amp; the name
+are used as the alternative text.
+When the sidebar is collapsed only the left part (the symbol) of the logo is shown
+unless BrandLogoCollapsedPath is used</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="13" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>BrandText</maml:name>
+        <maml:description>
+          <maml:para>The name shown at the top of the sidebar</maml:para>
+          <maml:para>Default value: Celerium.Nova</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="18" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>BrandUrl</maml:name>
+        <maml:description>
+          <maml:para>The link of the name at the top of the sidebar</maml:para>
+          <maml:para>Default value: #</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="5" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>ColumnName</maml:name>
+        <maml:description>
+          <maml:para>Hashtable of a property name &amp; the column title to show for it</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Collections.IDictionary</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Collections.IDictionary</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="Named" aliases="cf" required="false" variableLength="false" globbing="false">
+        <maml:name>Confirm</maml:name>
+        <maml:description>
+          <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
+        </maml:description>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="19" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Description</maml:name>
+        <maml:description>
+          <maml:para>The description meta tag of the page</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="17" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>FaviconPath</maml:name>
+        <maml:description>
+          <maml:para>The path of the icon (ico, png, or svg) that is shown on the browser tab</maml:para>
+          <maml:para>The icon is embedded in the report.
+By default an icon of BrandIcon is used</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="21" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Footer</maml:name>
+        <maml:description>
+          <maml:para>Text shown at the bottom of the page</maml:para>
+          <maml:para>By default no footer is shown</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="true (ByValue)" position="0" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>InputObject</maml:name>
+        <maml:description>
+          <maml:para>The objects shown in the table of the report</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Object[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Object[]</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="8" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>MaxCardsPerRow</maml:name>
+        <maml:description>
+          <maml:para>The most summary cards on one row of a desktop screen</maml:para>
+          <maml:para>Default value: 4</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Int32</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Int32</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="12" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>NavigationItem</maml:name>
+        <maml:description>
+          <maml:para>The links of the sidebar.
+Hashtables or objects with the properties Text, Url, Icon, &amp; Heading</maml:para>
+          <maml:para>Items with the same Heading are grouped under it.
+By default links to the summary &amp; the table are shown</maml:para>
+          <maml:para>Example:
+    @{ Heading = 'Help'; Text = 'Documentation'; Url = 'https://celerium.org'; Icon = 'info-circle' }</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Object[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Object[]</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="11" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>PageSize</maml:name>
+        <maml:description>
+          <maml:para>The number of table rows shown per page, 0 shows all rows</maml:para>
+          <maml:para>Default value: 10</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Int32</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Int32</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Path</maml:name>
+        <maml:description>
+          <maml:para>The file to save the report to.
+The folder is created when it does not exist</maml:para>
+          <maml:para>When it is not used the HTML text is returned instead</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="4" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Property</maml:name>
+        <maml:description>
+          <maml:para>The properties shown as table columns</maml:para>
+          <maml:para>By default the first 8 properties of the first object are used</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="22" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>ResourceMode</maml:name>
+        <maml:description>
+          <maml:para>How Bootstrap is added to the report</maml:para>
+          <maml:para>Acceptable values:
+    'Embedded','Cdn'</maml:para>
+          <maml:para>Embedded places the files in the report so it works offline (default).
+Cdn links the Bootstrap 5.3
+files of the jsDelivr CDN, an internet connection is needed to view the report</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="23" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>ResourcePath</maml:name>
+        <maml:description>
+          <maml:para>The HtmlReport folder to read the templates, css, js, &amp; icons from</maml:para>
+          <maml:para>By default the folder of the module is used.
+Use this to change the look of the report</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="6" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>StatusMap</maml:name>
+        <maml:description>
+          <maml:para>Colors the values of a column as a status badge, see New-clNovaHtmlTable</maml:para>
+          <maml:para>Example:
+    @{ Support = @{ Yes = 'Success'; 'Ending Soon' = 'Warning'; No = 'Danger' } }</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Collections.IDictionary</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Collections.IDictionary</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="3" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Subtitle</maml:name>
+        <maml:description>
+          <maml:para>A line of text shown next to the heading such as where the data came from</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="7" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>SummaryCard</maml:name>
+        <maml:description>
+          <maml:para>The summary cards shown above the table.
+Hashtables or objects with the properties of
+New-clNovaHtmlSummaryCard (Title, Value, Note, Percent, Color, Icon, Tooltip, &amp; Url)</maml:para>
+          <maml:para>The cards are laid out in rows that all have the same number of cards</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Object[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Object[]</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="10" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>TableNote</maml:name>
+        <maml:description>
+          <maml:para>Notes shown in a list below the table</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="9" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>TableTitle</maml:name>
+        <maml:description>
+          <maml:para>The title shown in the header of the table</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Title</maml:name>
+        <maml:description>
+          <maml:para>The title of the report, shown in the header, the page title, &amp; as the heading</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="Named" aliases="wi" required="false" variableLength="false" globbing="false">
+        <maml:name>WhatIf</maml:name>
+        <maml:description>
+          <maml:para>Runs the command in a mode that only reports what would happen without performing the actions.</maml:para>
+        </maml:description>
+        <dev:type>
+          <maml:name>System.Management.Automation.SwitchParameter</maml:name>
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.Object[]</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para />
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para />
+        </maml:description>
+      </command:returnValue>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.IO.FileInfo</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para />
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>N\A</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--------- EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+Get-Service | New-clNovaHtmlReport -Title 'Services' -Property Name, Status, StartType -Path .\Services.html
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Creates an HTML report of the services &amp; saves it to Services.html</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+$Cards = @(
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>@{ Title = 'Running'; Value = 120; Color = 'Success'; Icon = 'check-circle-fill' }
+    @{ Title = 'Stopped'; Value = 80; Color = 'Danger'; Icon = 'x-circle-fill' }
+)
+$Services | New-clNovaHtmlReport -Title 'Services' -SummaryCard $Cards -StatusMap @{ Status = @{ Running = 'Success'; Stopped = 'Danger' } } -Path .\Services.html</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Creates a report with 2 summary cards &amp; colors the Status column</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- EXAMPLE 3 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+$Html = Get-Process | New-clNovaHtmlReport -Title 'Processes' -ResourceMode Cdn
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns the HTML text of a report that links to the Bootstrap CDN files</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/HtmlReport/New-clNovaHtmlReport.html</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://celerium.github.io/Celerium.Nova/site/HtmlReport/New-clNovaHtmlReport.html</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/HtmlReport/New-clNovaHtmlReport.html</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>New-clNovaHtmlSummaryCard</command:name>
+      <maml:description>
+        <maml:para>Creates the HTML of one summary card</maml:para>
+      </maml:description>
+      <command:verb>New</command:verb>
+      <command:noun>clNovaHtmlSummaryCard</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The New-clNovaHtmlSummaryCard cmdlet creates the HTML of a single summary card for an HTML
+report.
+A summary card shows one quick fact about the data in the report such as a
+total, a percentage, or a link
+
+A card can show a progress bar (Percent), a small note, an icon, &amp; a tooltip.
+A card
+with a Url is a link
+
+The cards are placed on the page with New-clNovaHtmlSummaryCardSet which creates evenly
+filled rows of cards.
+The HTML needs the Celerium.Nova report css to look right, use
+New-clNovaHtmlReport to create a complete page</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-clNovaHtmlSummaryCard</maml:name>
+        <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+          <maml:name>Title</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="1" aliases="none" required="true" variableLength="false" globbing="false">
+          <maml:name>Value</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Object</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Note</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="3" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Percent</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">double</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Double</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="4" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Color</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="5" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Icon</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="6" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Tooltip</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="7" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Url</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="8" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>ResourcePath</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter pipelineInput="false" position="4" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Color</maml:name>
+        <maml:description>
+          <maml:para>The color of the card border, title, &amp; progress bar</maml:para>
+          <maml:para>Acceptable values:
+    'Primary','Success','Info','Warning','Danger','Secondary','Dark'</maml:para>
+          <maml:para>Default value: Primary</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="5" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Icon</maml:name>
+        <maml:description>
+          <maml:para>The name of a Bootstrap Icon to show on the card</maml:para>
+          <maml:para>Default value: clipboard-data</maml:para>
+          <maml:para>Icons that can be used are listed in build\HtmlReport\resources.json</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Note</maml:name>
+        <maml:description>
+          <maml:para>A small line of text shown below the value</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="3" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Percent</maml:name>
+        <maml:description>
+          <maml:para>Shows a progress bar that is filled with this percentage (0 - 100)</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Double</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Double</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="8" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>ResourcePath</maml:name>
+        <maml:description>
+          <maml:para>The HtmlReport folder to read the templates &amp; icons from</maml:para>
+          <maml:para>By default the folder of the module is used</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+        <maml:name>Title</maml:name>
+        <maml:description>
+          <maml:para>The title of the card</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="6" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Tooltip</maml:name>
+        <maml:description>
+          <maml:para>The text that is shown when the mouse is over the card</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="7" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Url</maml:name>
+        <maml:description>
+          <maml:para>Makes the card a link.
+Only http, https, mailto, &amp; page (#) links are allowed</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="1" aliases="none" required="true" variableLength="false" globbing="false">
+        <maml:name>Value</maml:name>
+        <maml:description>
+          <maml:para>The main value of the card such as a total or text like [ 14 | 61% ]</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Object</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Object</maml:name>
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes />
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para />
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>N\A</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--------- EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+New-clNovaHtmlSummaryCard -Title 'Total Computers' -Value 23 -Icon 'laptop' -Color Primary
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns the HTML of a card that shows the total number of computers</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+New-clNovaHtmlSummaryCard -Title 'Supported' -Value '14 | 61%' -Percent 61 -Color Success -Icon 'check-circle-fill' -Tooltip 'Systems Microsoft supports'
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns the HTML of a card with a progress bar that is 61% full</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- EXAMPLE 3 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+New-clNovaHtmlSummaryCard -Title 'Microsoft Lifecycles' -Value 'learn.microsoft.com' -Url 'https://learn.microsoft.com/en-us/lifecycle/products/' -Color Info
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns the HTML of a card that opens the Microsoft lifecycle pages</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/HtmlReport/New-clNovaHtmlSummaryCard.html</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://celerium.github.io/Celerium.Nova/site/HtmlReport/New-clNovaHtmlSummaryCard.html</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/HtmlReport/New-clNovaHtmlSummaryCard.html</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>New-clNovaHtmlSummaryCardSet</command:name>
+      <maml:description>
+        <maml:para>Creates the HTML of a group of summary cards that are laid out in evenly filled rows</maml:para>
+      </maml:description>
+      <command:verb>New</command:verb>
+      <command:noun>clNovaHtmlSummaryCardSet</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The New-clNovaHtmlSummaryCardSet cmdlet creates the HTML of any number of summary cards &amp;
+scales the layout to fit them.
+Every row has the same number of cards
+
+    6 cards  -&gt; 2 rows of 3 cards
+    12 cards -&gt; 3 rows of 4 cards
+
+At most MaxPerRow cards are placed on one row of a desktop screen, tablets show 2 cards per
+row, &amp; phones show 1 card per row.
+A row that can not be filled evenly (for example 7 cards)
+is centered
+
+Every card is defined by a hashtable or an object with the same properties as the
+parameters of New-clNovaHtmlSummaryCard (Title, Value, Note, Percent, Color, Icon, Tooltip, &amp; Url)</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-clNovaHtmlSummaryCardSet</maml:name>
+        <command:parameter pipelineInput="false" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+          <maml:name>Card</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">Object[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Object[]</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>MaxPerRow</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Int32</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Id</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="3" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>ResourcePath</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter pipelineInput="true (ByValue)" position="0" aliases="none" required="true" variableLength="false" globbing="false">
+        <maml:name>Card</maml:name>
+        <maml:description>
+          <maml:para>One or more cards, hashtables or objects with the properties of New-clNovaHtmlSummaryCard</maml:para>
+          <maml:para>Example:
+    @{ Title = 'Total'; Value = 23; Icon = 'laptop' }</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Object[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Object[]</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Id</maml:name>
+        <maml:description>
+          <maml:para>The HTML id of the group, can be used as an anchor (#psn-summary)</maml:para>
+          <maml:para>Default value: psn-summary</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>MaxPerRow</maml:name>
+        <maml:description>
+          <maml:para>The most cards that are placed on one row of a desktop screen</maml:para>
+          <maml:para>Default value: 4</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Int32</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Int32</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="3" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>ResourcePath</maml:name>
+        <maml:description>
+          <maml:para>The HtmlReport folder to read the templates &amp; icons from</maml:para>
+          <maml:para>By default the folder of the module is used</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.Object[]</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para />
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para />
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>N\A</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--------- EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+$Cards = 1..6 | ForEach-Object { @{ Title = "Card $_"; Value = $_ } }
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>New-clNovaHtmlSummaryCardSet -Card $Cards</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns the HTML of 6 cards placed on 2 rows with 3 cards on each row</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+$Cards = @(
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>@{ Title = 'Supported'; Value = '14 | 61%'; Percent = 61; Color = 'Success'; Icon = 'check-circle-fill' }
+    [PSCustomObject]@{ Title = 'Total'; Value = 23; Icon = 'laptop' }
+)
+$Cards | New-clNovaHtmlSummaryCardSet -MaxPerRow 6</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns the HTML of 2 cards, cards can be sent down the pipeline</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/HtmlReport/New-clNovaHtmlSummaryCardSet.html</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://celerium.github.io/Celerium.Nova/site/HtmlReport/New-clNovaHtmlSummaryCardSet.html</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/HtmlReport/New-clNovaHtmlSummaryCardSet.html</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+  <command:command>
+    <command:details>
+      <command:name>New-clNovaHtmlTable</command:name>
+      <maml:description>
+        <maml:para>Creates the HTML of a sortable, searchable table card from PowerShell objects</maml:para>
+      </maml:description>
+      <command:verb>New</command:verb>
+      <command:noun>clNovaHtmlTable</command:noun>
+    </command:details>
+    <maml:description>
+      <maml:para>The New-clNovaHtmlTable cmdlet converts PowerShell objects into the HTML of a table card
+for an HTML report
+
+The table
+    - Can be sorted by clicking any column header (numbers, dates, &amp; text are sorted correctly)
+    - Can be searched &amp; shows a configurable number of rows per page
+    - Highlights the entire row when the mouse is over it
+    - Scrolls sideways on small screens instead of breaking the page
+
+Only the properties in the Property parameter are shown (in that order).
+When it is not
+used the first 8 properties of the first object are shown so that the table fits on a typical
+monitor without a lot of horizontal scrolling
+
+All values are HTML encoded.
+The sorting, search, &amp; paging are done by the script of the Celerium.Nova
+report (build\HtmlReport\js\Celerium.Nova.js) which New-clNovaHtmlReport adds to the page</maml:para>
+    </maml:description>
+    <command:syntax>
+      <command:syntaxItem>
+        <maml:name>New-clNovaHtmlTable</maml:name>
+        <command:parameter pipelineInput="false" position="0" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>InputObject</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">Object[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Object[]</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Property</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>ColumnName</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">IDictionary</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Collections.IDictionary</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="3" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>StatusMap</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">IDictionary</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Collections.IDictionary</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="4" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Title</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="5" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Id</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="6" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>PageSize</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">int</command:parameterValue>
+          <dev:type>
+            <maml:name>System.Int32</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="7" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>Note</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string[]</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String[]</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="8" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>DateFormat</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+        <command:parameter pipelineInput="false" position="9" aliases="none" required="false" variableLength="false" globbing="false">
+          <maml:name>ResourcePath</maml:name>
+          <maml:description />
+          <command:parameterValue required="true" variableLength="false">string</command:parameterValue>
+          <dev:type>
+            <maml:name>System.String</maml:name>
+          </dev:type>
+        </command:parameter>
+      </command:syntaxItem>
+    </command:syntax>
+    <command:parameters>
+      <command:parameter pipelineInput="false" position="2" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>ColumnName</maml:name>
+        <maml:description>
+          <maml:para>Hashtable of a property name &amp; the column title to show for it</maml:para>
+          <maml:para>Example:
+    @{ OSVersion = 'OS Version'; EndOfSupport = 'End Of Support' }</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Collections.IDictionary</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Collections.IDictionary</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="8" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>DateFormat</maml:name>
+        <maml:description>
+          <maml:para>The format of date values</maml:para>
+          <maml:para>Default value: yyyy-MM-dd HH:mm</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="5" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Id</maml:name>
+        <maml:description>
+          <maml:para>The HTML id of the table</maml:para>
+          <maml:para>Default value: psn-table</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="true (ByValue)" position="0" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>InputObject</maml:name>
+        <maml:description>
+          <maml:para>The objects to show in the table, hashtables are also accepted</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Object[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Object[]</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="7" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Note</maml:name>
+        <maml:description>
+          <maml:para>Notes that are shown in a list below the table</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="6" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>PageSize</maml:name>
+        <maml:description>
+          <maml:para>The number of rows shown per page, 0 shows all rows</maml:para>
+          <maml:para>Default value: 10</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Int32</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Int32</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="1" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Property</maml:name>
+        <maml:description>
+          <maml:para>The names of the properties to show as columns</maml:para>
+          <maml:para>By default the first 8 properties of the first object are used</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String[]</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String[]</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="9" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>ResourcePath</maml:name>
+        <maml:description>
+          <maml:para>The HtmlReport folder to read the templates from</maml:para>
+          <maml:para>By default the folder of the module is used</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="3" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>StatusMap</maml:name>
+        <maml:description>
+          <maml:para>Colors the values of a column as a status badge</maml:para>
+          <maml:para>Hashtable of a property name &amp; a hashtable of values &amp; colors</maml:para>
+          <maml:para>Acceptable colors:
+    'Primary','Success','Info','Warning','Danger','Secondary','Dark'</maml:para>
+          <maml:para>Example:
+    @{ Support = @{ Yes = 'Success'; 'Ending Soon' = 'Warning'; No = 'Danger' } }</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.Collections.IDictionary</command:parameterValue>
+        <dev:type>
+          <maml:name>System.Collections.IDictionary</maml:name>
+        </dev:type>
+      </command:parameter>
+      <command:parameter pipelineInput="false" position="4" aliases="none" required="false" variableLength="false" globbing="false">
+        <maml:name>Title</maml:name>
+        <maml:description>
+          <maml:para>The title shown in the header of the table card</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="true">System.String</command:parameterValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+      </command:parameter>
+    </command:parameters>
+    <command:inputTypes>
+      <command:inputType>
+        <dev:type>
+          <maml:name>System.Object[]</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para />
+        </maml:description>
+      </command:inputType>
+    </command:inputTypes>
+    <command:returnValues>
+      <command:returnValue>
+        <dev:type>
+          <maml:name>System.String</maml:name>
+        </dev:type>
+        <maml:description>
+          <maml:para />
+        </maml:description>
+      </command:returnValue>
+    </command:returnValues>
+    <maml:alertSet>
+      <maml:alert>
+        <maml:para>N\A</maml:para>
+      </maml:alert>
+    </maml:alertSet>
+    <command:examples>
+      <command:example>
+        <maml:title>--------- EXAMPLE 1 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+Get-Process | Select-Object -First 50 | New-clNovaHtmlTable -Property Name, Id, CPU -Title 'Processes'
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns the HTML of a table card that shows the Name, Id, &amp; CPU of 50 processes</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+      <command:example>
+        <maml:title>--------- EXAMPLE 2 ---------</maml:title>
+        <maml:introduction>
+          <maml:para>```powershell
+$Data | New-clNovaHtmlTable -Property ComputerName, Support -StatusMap @{ Support = @{ Yes = 'Success'; No = 'Danger' } }
+```</maml:para>
+          <maml:para>&#x80;</maml:para>
+          <maml:para>Returns the HTML of a table where the Support column is shown as green &amp; red badges</maml:para>
+        </maml:introduction>
+        <dev:code />
+        <dev:remarks />
+      </command:example>
+    </command:examples>
+    <command:relatedLinks>
+      <maml:navigationLink>
+        <maml:linkText>Online Version</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/HtmlReport/New-clNovaHtmlTable.html</maml:uri>
+      </maml:navigationLink>
+      <maml:navigationLink>
+        <maml:linkText>https://celerium.github.io/Celerium.Nova/site/HtmlReport/New-clNovaHtmlTable.html</maml:linkText>
+        <maml:uri>https://celerium.github.io/Celerium.Nova/site/HtmlReport/New-clNovaHtmlTable.html</maml:uri>
+      </maml:navigationLink>
+    </command:relatedLinks>
+  </command:command>
+</helpItems>

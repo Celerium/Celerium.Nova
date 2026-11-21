@@ -1,0 +1,313 @@
+/*
+ * Celerium.Nova HTML report theme
+ *
+ * The layout of SB Admin 2 v4.1.4 (https://github.com/StartBootstrap/startbootstrap-sb-admin-2, MIT license)
+ * ported to Bootstrap 5.3. Only the parts that are used by the report are included.
+ *
+ * Colors
+ *   Sidebar & topbar  #212529
+ *   Page background   off white (easy on the eyes)
+ */
+
+:root {
+    --psn-sidebar-bg: #212529;
+    --psn-sidebar-width: 14rem;
+    --psn-sidebar-collapsed-width: 4.5rem;
+    --psn-topbar-bg: #212529;
+    --psn-topbar-height: 4.375rem;
+    --psn-page-bg: #f4f3ee;
+    --psn-card-bg: #fdfdfb;
+    --psn-border: #dfddd3;
+    --psn-text: #3a3b45;
+    --psn-text-muted: #6e707e;
+    --psn-row-hover: #d9e4f7;
+    --psn-gutter: 1.5rem;
+    --psn-primary: #4e73df;
+    --psn-success: #1cc88a;
+    --psn-info: #36b9cc;
+    --psn-warning: #f6c23e;
+    --psn-danger: #e74a3b;
+    --psn-secondary: #858796;
+    --psn-dark: #5a5c69;
+}
+
+html { position: relative; min-height: 100%; }
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--psn-page-bg);
+    color: var(--psn-text);
+    font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+a { text-decoration: none; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--psn-primary); outline-offset: 2px; }
+
+.psn-icon { width: 1em; height: 1em; vertical-align: -0.125em; flex-shrink: 0; }
+
+/* ------------------------------------------------------------------------------------------ */
+/* Layout                                                                                     */
+/* ------------------------------------------------------------------------------------------ */
+
+#wrapper { display: flex; min-height: 100vh; }
+
+#content-wrapper {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--psn-page-bg);
+}
+
+#content { flex: 1 0 auto; padding: var(--psn-gutter); }
+
+.psn-footer { flex-shrink: 0; padding: 1.5rem; font-size: 0.8rem; color: var(--psn-text-muted); text-align: center; }
+.psn-footer a { color: inherit; text-decoration: underline; }
+
+.text-xs { font-size: 0.7rem; }
+.text-gray-800 { color: #5a5c69 !important; }
+.text-gray-300 { color: #c9cbd9 !important; }
+
+/* ------------------------------------------------------------------------------------------ */
+/* Sidebar                                                                                    */
+/* ------------------------------------------------------------------------------------------ */
+
+.psn-sidebar {
+    flex: 0 0 var(--psn-sidebar-width);
+    width: var(--psn-sidebar-width);
+    min-height: 100vh;
+    background-color: var(--psn-sidebar-bg);
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.15s ease, flex-basis 0.15s ease, transform 0.2s ease;
+    z-index: 1030;
+}
+
+.psn-sidebar-inner { position: sticky; top: 0; display: flex; flex-direction: column; min-height: 100vh; max-height: 100vh; overflow-y: auto; overflow-x: hidden; }
+
+.psn-sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    height: var(--psn-topbar-height);
+    padding: 0 1.25rem;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.psn-sidebar-brand:hover { color: #fff; }
+.psn-sidebar-brand .psn-icon { font-size: 1.6rem; }
+.psn-sidebar-brand img { height: 2rem; max-width: 10rem; }
+.psn-sidebar-brand .psn-brand-logo { display: block; height: 2.4rem; width: auto; max-width: 100%; }
+.psn-sidebar-brand .psn-brand-logo-collapsed { display: none; }
+
+@media (min-width: 768px) {
+    /* A logo that has a collapsed version is swapped for it when the sidebar is collapsed */
+    body.psn-sidebar-collapsed .psn-sidebar-brand .psn-brand-logo-expanded { display: none; }
+    body.psn-sidebar-collapsed .psn-sidebar-brand .psn-brand-logo-collapsed { display: block; width: 2.6rem; height: 2.6rem; object-fit: contain; }
+
+    /* A logo without a collapsed version only shows the left part (the symbol) */
+    body.psn-sidebar-collapsed .psn-sidebar-brand .psn-brand-logo:not(.psn-brand-logo-expanded) { width: 2.4rem; object-fit: cover; object-position: left center; }
+}
+
+.psn-sidebar hr.psn-sidebar-divider { margin: 0 1rem 1rem; border-top: 1px solid rgba(255, 255, 255, 0.15); opacity: 1; }
+
+.psn-sidebar-heading {
+    padding: 0 1.25rem;
+    margin: 0.25rem 0;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    white-space: nowrap;
+}
+
+.psn-sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+.psn-sidebar .nav-link .psn-icon { font-size: 0.95rem; color: rgba(255, 255, 255, 0.55); }
+.psn-sidebar .nav-link:hover, .psn-sidebar .nav-link:focus { color: #fff; background-color: rgba(255, 255, 255, 0.06); }
+.psn-sidebar .nav-link:hover .psn-icon, .psn-sidebar .nav-link:focus .psn-icon { color: #fff; }
+
+.psn-sidebar-footer { margin-top: auto; padding: 1rem 1.25rem; font-size: 0.75rem; color: rgba(255, 255, 255, 0.55); background-color: rgba(0, 0, 0, 0.2); }
+.psn-sidebar-footer .psn-sidebar-footer-time { display: block; color: rgba(255, 255, 255, 0.85); font-weight: 700; }
+
+/* Collapsed sidebar (desktop) */
+@media (min-width: 768px) {
+    body.psn-sidebar-collapsed .psn-sidebar { flex-basis: var(--psn-sidebar-collapsed-width); width: var(--psn-sidebar-collapsed-width); }
+    body.psn-sidebar-collapsed .psn-sidebar-text,
+    body.psn-sidebar-collapsed .psn-sidebar-heading,
+    body.psn-sidebar-collapsed .psn-sidebar-footer { display: none; }
+    body.psn-sidebar-collapsed .psn-sidebar .nav-link { justify-content: center; padding: 0.85rem 0; }
+    body.psn-sidebar-collapsed .psn-sidebar .nav-link .psn-icon { font-size: 1.15rem; }
+    body.psn-sidebar-collapsed .psn-sidebar-brand { justify-content: center; padding: 0; }
+}
+
+/* The sidebar slides over the page on phones & small tablets */
+@media (max-width: 767.98px) {
+    .psn-sidebar { position: fixed; top: 0; left: 0; bottom: 0; transform: translateX(-100%); box-shadow: none; }
+    body.psn-sidebar-open .psn-sidebar { transform: translateX(0); box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5); }
+    .psn-sidebar-backdrop { display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.45); z-index: 1025; }
+    body.psn-sidebar-open .psn-sidebar-backdrop { display: block; }
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* Topbar                                                                                     */
+/* ------------------------------------------------------------------------------------------ */
+
+.psn-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: var(--psn-topbar-height);
+    padding: 0 var(--psn-gutter);
+    background-color: var(--psn-topbar-bg);
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(33, 37, 41, 0.15);
+}
+
+.psn-topbar-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.25rem;
+}
+.psn-topbar-toggle:hover { background-color: rgba(255, 255, 255, 0.12); color: #fff; }
+
+/* ------------------------------------------------------------------------------------------ */
+/* Cards                                                                                      */
+/* ------------------------------------------------------------------------------------------ */
+
+.card {
+    --bs-card-bg: var(--psn-card-bg);
+    --bs-card-border-color: var(--psn-border);
+    --bs-card-border-radius: 0.35rem;
+    --bs-card-cap-bg: #f4f2ea;
+    border-color: var(--psn-border);
+}
+.card.shadow { box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important; }
+.card-header { font-weight: 700; color: var(--psn-primary); }
+
+/* Color helpers for the summary cards & the status badges */
+.psn-c-primary   { --psn-c: var(--psn-primary); }
+.psn-c-success   { --psn-c: var(--psn-success); }
+.psn-c-info      { --psn-c: var(--psn-info); }
+.psn-c-warning   { --psn-c: var(--psn-warning); }
+.psn-c-danger    { --psn-c: var(--psn-danger); }
+.psn-c-secondary { --psn-c: var(--psn-secondary); }
+.psn-c-dark      { --psn-c: var(--psn-dark); }
+
+/*
+ * Summary cards
+ * The number of cards per row is calculated by New-clNovaHtmlSummaryCardSet so that every row has the same number of
+ * cards, it is set with --psn-cols-sm (phones), --psn-cols-md (tablets), & --psn-cols-xl (desktops)
+ * A last row that can not be filled (a prime number of cards) is centered
+ */
+.psn-card-grid {
+    --psn-cols: var(--psn-cols-sm, 1);
+    --psn-gap: var(--psn-gutter);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--psn-gap);
+    margin-bottom: var(--psn-gutter);
+}
+.psn-card-grid > .psn-card-col { flex: 0 0 calc((100% - (var(--psn-cols) - 1) * var(--psn-gap)) / var(--psn-cols)); min-width: 0; }
+
+@media (min-width: 576px)  { .psn-card-grid { --psn-cols: var(--psn-cols-md, 2); } }
+@media (min-width: 1200px) { .psn-card-grid { --psn-cols: var(--psn-cols-xl, 4); } }
+
+.psn-summary-card { border-left: 0.25rem solid var(--psn-c, var(--psn-primary)) !important; }
+.psn-summary-card .psn-card-title { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.02rem; text-transform: uppercase; color: var(--psn-c, var(--psn-primary)); margin-bottom: 0.25rem; }
+.psn-summary-card .psn-card-value { font-size: 1.25rem; font-weight: 700; color: #5a5c69; line-height: 1.3; }
+.psn-summary-card .psn-card-note { font-size: 0.75rem; color: var(--psn-text-muted); }
+.psn-summary-card .psn-card-icon { font-size: 2rem; color: #c9cbd9; }
+.psn-summary-card .progress { height: 0.5rem; background-color: #e9e7dd; }
+.psn-summary-card .progress-bar { background-color: var(--psn-c, var(--psn-primary)); }
+.psn-summary-card a.stretched-link { color: inherit; }
+
+/* ------------------------------------------------------------------------------------------ */
+/* Table                                                                                      */
+/* ------------------------------------------------------------------------------------------ */
+
+.psn-table-tools { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.85rem; }
+.psn-table-tools .form-select, .psn-table-tools .form-control { font-size: 0.85rem; background-color: #fff; }
+.psn-table-tools label { display: inline-flex; align-items: center; gap: 0.5rem; margin: 0; white-space: nowrap; }
+.psn-table-tools .form-select { width: auto; }
+.psn-table-search { min-width: 14rem; }
+
+.psn-table { --bs-table-bg: transparent; --bs-table-striped-bg: rgba(33, 37, 41, 0.03); margin-bottom: 0; font-size: 0.85rem; color: var(--psn-text); }
+.psn-table thead th {
+    position: relative;
+    padding-right: 1.6rem;
+    white-space: nowrap;
+    background-color: #ecebe3;
+    border-bottom: 2px solid var(--psn-border);
+    color: #3a3b45;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+}
+.psn-table thead th:hover { background-color: #e2e0d5; }
+.psn-table thead th::after { content: ""; position: absolute; right: 0.6rem; top: 50%; width: 0.6rem; height: 0.9rem; transform: translateY(-50%); opacity: 0.3;
+    background: no-repeat center / contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 16'%3E%3Cpath d='M5 0 10 6H0zM5 16 0 10h10z' fill='%23212529'/%3E%3C/svg%3E"); }
+.psn-table thead th[aria-sort="ascending"]::after  { opacity: 0.9; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 16'%3E%3Cpath d='M5 3 10 9H0z' fill='%234e73df'/%3E%3C/svg%3E"); }
+.psn-table thead th[aria-sort="descending"]::after { opacity: 0.9; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 16'%3E%3Cpath d='M5 13 0 7h10z' fill='%234e73df'/%3E%3C/svg%3E"); }
+
+.psn-table tbody td { vertical-align: middle; }
+
+/* The whole row is highlighted when the mouse is over it (Bootstrap colors the cells, not the row, so every cell is colored) */
+.psn-table > tbody > tr:hover > * { --bs-table-bg-state: var(--psn-row-hover); background-color: var(--psn-row-hover); color: var(--psn-text); box-shadow: none; }
+
+.psn-table-empty td { text-align: center; color: var(--psn-text-muted); padding: 1.5rem; }
+
+.psn-table-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; margin-top: 0.75rem; font-size: 0.85rem; color: var(--psn-text-muted); }
+.psn-table-footer .pagination { margin: 0; flex-wrap: wrap; }
+.psn-table-footer .page-link { font-size: 0.85rem; color: var(--psn-primary); background-color: #fff; }
+.psn-table-footer .page-item.active .page-link { background-color: var(--psn-primary); border-color: var(--psn-primary); color: #fff; }
+.psn-table-footer .page-item.disabled .page-link { color: #adb5bd; }
+
+.psn-table-notes { margin: 1rem 0 0; padding-left: 1.25rem; font-size: 0.8rem; color: var(--psn-text-muted); }
+
+/* Status badges (cells that are colored by the StatusMap parameter of New-clNovaHtmlTable) */
+.psn-badge { display: inline-block; min-width: 4.5rem; padding: 0.3em 0.65em; border-radius: 0.35rem; font-size: 0.75rem; font-weight: 700; line-height: 1.2; text-align: center; color: #fff; background-color: var(--psn-c, var(--psn-secondary)); }
+.psn-badge.psn-c-warning { color: #3a2e00; }
+
+/* ------------------------------------------------------------------------------------------ */
+/* Small screens & print                                                                      */
+/* ------------------------------------------------------------------------------------------ */
+
+@media (max-width: 575.98px) {
+    :root { --psn-gutter: 1rem; }
+    .psn-table-search { min-width: 0; width: 100%; }
+    .psn-table-tools label.psn-table-search-label { width: 100%; }
+}
+
+@media print {
+    .psn-sidebar, .psn-topbar, .psn-table-tools, .psn-table-footer .pagination, .psn-sidebar-backdrop { display: none !important; }
+    body { background: #fff; }
+    .card { box-shadow: none !important; }
+}
